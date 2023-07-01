@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+/*
+readability-extractor pre-processor
+MIT License
+
+Usage:
+  ./readez 'https://example.com/original/url.html'
+*/
+
+const input_path = process.argv[2]
+const temp_path = process.argv[3] || "temp.html"
+
+curl input_path temp_path
+readablity-extractor temp_path input_path
